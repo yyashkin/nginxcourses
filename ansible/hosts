@@ -1,0 +1,13 @@
+[webserver]
+host80 ansible_ssh_host=192.168.222.80 ansible_ssh_user=user
+host81 ansible_ssh_host=192.168.222.81 ansible_ssh_user=user
+host82 ansible_ssh_host=192.168.222.82 ansible_ssh_user=user
+host83 ansible_ssh_host=192.168.222.83 ansible_ssh_user=user
+host84 ansible_ssh_host=192.168.222.84 ansible_ssh_user=user
+host85 ansible_ssh_host=192.168.222.85 ansible_ssh_user=user
+host86 ansible_ssh_host=192.168.222.86 ansible_ssh_user=user
+host87 ansible_ssh_host=192.168.222.87 ansible_ssh_user=user
+host88 ansible_ssh_host=192.168.222.88 ansible_ssh_user=user
+host109 ansible_ssh_host=192.168.222.109 ansible_ssh_user=user
+[me]
+host121 ansible_ssh_host=192.168.222.121 ansible_ssh_user=user

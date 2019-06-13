@@ -1,0 +1,24 @@
+---
+- hosts: webserver
+  remote_user: root
+  become: true
+  tasks:
+
+  - name: install the latest version of Apache
+    yum:
+      name: httpd
+      state: latest
+
+  - name: copy httpd.conf
+    template: src=./docker/httpd.conf dest=/etc/httpd/conf/
+    notify:
+        - restart apache
+
+  - name: copy index.html
+    template: src=./docker/index.html dest=/var/www/html/
+    notify:
+        - restart apache
+
+  handlers:
+    - name: restart apache
+      service: name=httpd state=restarted
