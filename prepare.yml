@@ -1,0 +1,33 @@
+---
+- hosts: webserver
+  remote_user: root
+  become: yes
+  tasks:
+
+  - name: Creates directory
+    file:
+      path: /tmp/ssl
+      state: directory
+
+  - name: Copy file .key
+    copy:
+      src: ./ssl/example.key
+      dest: /tmp/ssl
+
+  - name: Copy file .pem
+    copy:
+      src: ./ssl/example.pem
+      dest: /tmp/ssl
+
+  - name: Add repo nginx
+    copy:
+      src: ./nginx.repo
+      dest: /etc/yum.repos.d
+
+  - name: install nano
+    yum:
+      name: nano
+      state: latest
+
+      
+      
