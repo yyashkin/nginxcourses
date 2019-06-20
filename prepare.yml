@@ -29,5 +29,10 @@
       name: nano
       state: latest
 
+  - name: remove the Nginx package
+    yum:
+      name: nginx
+      state: absent
+
       
       
